@@ -10,11 +10,11 @@ This is just a dict of {atom_name: atom_number} referenced by a few other script
 
 This tool will transform a molpro-style xyz file into internal coordinates ([Z-matrix](https://en.wikipedia.org/wiki/Z-matrix_(chemistry))). The xyz file should be formatted like the included butadiene.xyz file is:
 
-- first line: Number of atoms
+first line: Number of atoms
 
-- second line: Name of molecule (optional)
+second line: Name of molecule (optional)
 
-- remaining lines: 
+remaining lines: 
 
 |Atom name |X coordinate|Y Coordinate|Z Coordinate|
 ---------------------------------------------------
