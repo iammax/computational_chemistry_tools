@@ -1,4 +1,4 @@
-Here's a few tools I made that I found myself using constantly, so maybe somebody else will get some use out of them.
+Here's a few tools I made that I found myself using constantly, so maybe somebody else will get some use out of them. Please let me know if anything doens't work!
 
 Scripts included:
 
