@@ -27,3 +27,6 @@ $ python z_matrix_maker *xyzfile.xyz*
 
 The result z matrix will be put in results/
 
+* **xyz_matrix_maker** (requires: periodic.py)
+
+This tool changes a z-matrix into a molpro-style xyz file. Format of source z_matrix should match that in example butadiene.z file. More details later
