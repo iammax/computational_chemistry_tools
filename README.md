@@ -8,7 +8,7 @@ This is just a dict of {atom_name: atom_number} referenced by a few other script
 
 * **z_matrix_maker.py** (requires: periodic.py, zmatconfig.txt)
 
-This tool will transform a molpro-style xyz file into internal coordinates ([Z-matrix](https://en.wikipedia.org/wiki/Z-matrix_(chemistry))). The xyz file should be formatted like the included butadiene.xyz file is:
+This tool will transform a molpro-style xyz file into internal coordinates ([Z-matrix](https://en.wikipedia.org/wiki/Z-matrix_(chemistry))). The xyz file should be formatted like the included butadiene.xyz example file. Details of formatting below:
 
 first line: Number of atoms
 
