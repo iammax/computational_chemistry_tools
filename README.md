@@ -27,7 +27,7 @@ remaining lines:
 
 z_matrix_maker reads from the zmatconfig file you provide it to determine which bonds and angles to use. You can ignore this behavior by leaving it out of the command to call z_matrix_maker.py, however the resulting z_matrix, while mathematically valid, will probably not utilize physically meaningful bonds and angles. The zmatconfig file is meant to make a z-matrix like the one in the bottom table on the above wikipedia page (checked on August 11, 2018), where there is a column for bonded atom, angled atom, and atom for dihedral plane respectively. The zmatconfig file's columns are:
 
-|Atom number (in listed order in geometry input) |bonded atom|angled atom|dihedral atom|
+|Atom number (in listed order in input.xyz) |bonded atom|angled atom|dihedral atom|
 ---------------------------------------------------
 
 For example if the a column is  1 2 3 4, the bond length will be between atoms 1 and 2, the angle will be between atoms 1, 2, and 3, and the dihedral angle will be between the planes created by atoms 1, 2, 3 and the plane created by atoms 2, 3, 4. Note that the first atom in a z-matrix essentially has no data (due to being arbitrarily placed), the second has only a bond length, and the third has only a bond length and bond angle, so a few numbers in zmatconfig are ignored (last 3 columns in row 1, last 2 columns in row 2, last 1 column in row 3). They need to be there anyway for the file to be parsed; just put any numbers.

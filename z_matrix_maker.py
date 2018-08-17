@@ -71,17 +71,17 @@ def atomlistmaker(infile):
 		quit()
 	atomlist = []
 	try:
-		specify_config = int(sys.argv[2])
-	except:
-		specify_config = 1
-	if specify_config == 1:
-		zmatconfig = np.genfromtxt('zmatconfig.txt')
+		zmatconfig = np.genfromtxt(sys.argv[2])
 		if len(zmatconfig) != numatoms:
 			print 'config lines: ', len(zmatconfig)
 			print 'num atoms: ', numatoms
 			print 'Config file has different length than # of atoms'
 			quit()
-	else:
+	except:
+		try:
+			print 'Cannot read your z matrix config file: {0}\n, using atoms 1, 2, and 3 as coordinate base'.format(sys.argv[2])
+		except:
+			print "Looks like you didn't give a z matrix config file. Using atoms 1, 2, 3 as coordinate base"
 		zmatconfig = [[q, 1, 2, 3] for q in range (0, numatoms)]
 	counter = 0
 	for line in lines[2: numatoms+3]:
