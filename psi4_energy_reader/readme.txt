@@ -1,0 +1,1 @@
+This plots the output energies + orbital populations from a psi4 output. Note that I wrote the psi4 module which gives the output; the reader looks for specific lines, so it won't read EVERY psi4 output. IT's also coded for 7 orbitals which is what I was using for my text case; I plan to generalize the reader later.
