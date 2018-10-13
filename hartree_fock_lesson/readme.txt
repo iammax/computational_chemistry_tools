@@ -1,0 +1,1 @@
+This is a quick and simple hartree fock calculator that's pre-coded with an overlap matrix, electron repulsion integrals, and other physical data. It was written interactively with some masters students in my PhD group as a tutorial to see how HF works. The data given in the .dat files is for water at a slightly stretched configuration.
