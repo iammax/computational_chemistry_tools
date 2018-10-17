@@ -1,8 +1,7 @@
-#gets s0, s1, s2 from outfile energy extractor.py and plots them. relies on outfile being named "out".
+#gets the list of energies from outfile_energy_reader_grep.py and then plots them. Right now this is hardcoded for 3 energies; will generalize later
 
-
-
-import outfile_energy_extractor as oee
+import outfile_energy_reader_grep as oee
+#import outfile_energy_extractor as oee
 import sys
 
 filename = sys.argv[1]
@@ -17,5 +16,5 @@ plt.ticklabel_format(useOffset=False)
 plt.legend(['s0', 's1', 's2'])
 plt.xlabel('Frame #')
 plt.ylabel('Energy')
-plt.xlim(None, None)
+plt.xlim(None, len(xs))
 plt.show()
