@@ -66,7 +66,7 @@ def atomlistmaker(infilename):
 def main():
 	if not os.path.exists('results'):
 		os.makedirs('results')
-	pl = 0
+	pl = 0 #print level; 0 for silent, 1 for verbose
 	try:
 		infile = sys.argv[1]
 		infilename = infile
