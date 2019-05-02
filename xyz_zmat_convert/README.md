@@ -34,7 +34,7 @@ For example if the a column is  1 2 3 4, the bond length will be between atoms 1
 
 Thanks to http://azevedolab.net/resources/dihedral_angle.pdf for a good guide on calculating dihedral angles.
 
-* **xyz_matrix_maker** (requires: periodic.py)
+* **xyz_matrix_maker.py** (requires: periodic.py)
 
 This tool changes a z-matrix into a molpro-style xyz file. Format of source z_matrix should match that in example toluene.z file. 
 
