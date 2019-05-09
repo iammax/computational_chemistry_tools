@@ -25,7 +25,7 @@ for q in Me- Me+ Transoid
 do
 for num in {0..100}
 do
-cat itergeo/$q/$num.xyz >> ./$q\_all_frames.xyz
+cat itergeo/$q/$num.xyz >> ./final_animations/$q\_all_frames.xyz
 mv itergeo/$q/$num.xyz itergeo/$q/$q\_$num.xyz
 done
 done

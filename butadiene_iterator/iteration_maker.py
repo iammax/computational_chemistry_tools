@@ -52,8 +52,6 @@ def main_1(filename): #for Me+ and Me-
 def main_2(filename): # for Transoid
 	print 'Iterating {0}...'.format(filename)
 	confile = filename
-	temp = open('temp.txt', 'w')
-	temp.write(confile)
 	con = confile[0:-2]
 	numatoms = int(linecache.getline('basegeo/fc.z', 1))
 	#print 'This many atoms: ', numatoms
