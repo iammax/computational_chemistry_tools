@@ -25,6 +25,7 @@ def matrix_print(matrix):
 		for j in range (numrows):
 			line += str(matrix[i][j]) + ' '
 		print line
+
 def G_maker(D, ERIs):
 	matrix = np.zeros([numfuncs, numfuncs])
 	for mu in range (numfuncs):
