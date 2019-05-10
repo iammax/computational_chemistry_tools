@@ -10,15 +10,15 @@ def main_1(filename): #for Me+ and Me-
  	con = filename
 	conf = filename[:-2]
 	confile = '{0}.z'.format(con)
-	numatoms = int(linecache.getline('basegeo/fc.z', 1))
+	numatoms = int(linecache.getline('base_geometries/fc.z', 1))
 	#print 'This many atoms: ', numatoms
 	for n in range (0, 101):
-		outfile = open('itergeo/{0}/{1}.z'.format(conf, n), 'w')
+		outfile = open('iterations/{0}/{1}.z'.format(conf, n), 'w')
 		outfile.write(str(numatoms) + '\n')
 		outfile.write(confile + '\n')
 		for l in range (3, numatoms + 3):
-			fcline = linecache.getline('basegeo/fc.z', l)
-			conicline = linecache.getline('basegeo/{0}'.format(con), l)
+			fcline = linecache.getline('base_geometries/fc.z', l)
+			conicline = linecache.getline('base_geometries/{0}'.format(con), l)
 			outfile.write(fcline.split()[0] + ' ')
 			inx = 0
 			outx = 0
@@ -53,15 +53,15 @@ def main_2(filename): # for Transoid
 	print 'Iterating {0}...'.format(filename)
 	confile = filename
 	con = confile[0:-2]
-	numatoms = int(linecache.getline('basegeo/fc.z', 1))
+	numatoms = int(linecache.getline('base_geometries/fc.z', 1))
 	#print 'This many atoms: ', numatoms
 	for n in range (0, 101):
-		outfile = open('itergeo/{0}/{1}.z'.format(con, n), 'w')
+		outfile = open('iterations/{0}/{1}.z'.format(con, n), 'w')
 		outfile.write(str(numatoms) + '\n')
 		outfile.write(confile + '\n')
 		for l in range (3, numatoms + 1):
-			fcline = linecache.getline('basegeo/fc.z', l)
-			conicline = linecache.getline('basegeo/{0}'.format(confile), l)
+			fcline = linecache.getline('base_geometries/fc.z', l)
+			conicline = linecache.getline('base_geometries/{0}'.format(confile), l)
 			outfile.write(fcline.split()[0] + ' ')
 			inx = 0
 			outx = 0
@@ -93,13 +93,13 @@ def main_2(filename): # for Transoid
 	#		print 'diffx first loop: ', diffx
 			outfile.write('\n')
 	for n in range (0, 101):
-		outfile = open('itergeo/{0}/{1}.z'.format(con, n), 'a')
+		outfile = open('iterations/{0}/{1}.z'.format(con, n), 'a')
 		for o in range (numatoms + 1, numatoms + 2):
 	#####
-			fcline1 = linecache.getline('basegeo/fc.z', o)
-			conicline1 = linecache.getline('basegeo/{0}'.format(confile), o)
-			fcline2 = linecache.getline('basegeo/fc.z', o+1)
-			conicline2 = linecache.getline('basegeo/{0}'.format(confile), o+1)
+			fcline1 = linecache.getline('base_geometries/fc.z', o)
+			conicline1 = linecache.getline('base_geometries/{0}'.format(confile), o)
+			fcline2 = linecache.getline('base_geometries/fc.z', o+1)
+			conicline2 = linecache.getline('base_geometries/{0}'.format(confile), o+1)
 			inatom1 = fcline1.split()[0]
 			inatom2 = fcline2.split()[0]
 			inr1 = fcline1.split()[1]

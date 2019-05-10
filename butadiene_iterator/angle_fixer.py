@@ -5,12 +5,12 @@ import sys
 
 def main(filename):
 	print 'Fixing angles for {0} ...'.format(filename)
-	tfc = open('basegeo/tfc.z', 'w')
-	tci = open('basegeo/tci.z', 'w')
+	tfc = open('base_geometries/tfc.z', 'w')
+	tci = open('base_geometries/tci.z', 'w')
 	n = filename
 	for l in range (0, 13):
-		infcd = linecache.getline('basegeo/fc.z', l)
-		inccd = linecache.getline('basegeo/{0}'.format(n), l)
+		infcd = linecache.getline('base_geometries/fc.z', l)
+		inccd = linecache.getline('base_geometries/{0}'.format(n), l)
 		if l > 5: 
 			infcdi = float(infcd.split()[6])
 			inccdi = float(inccd.split()[6])
@@ -53,10 +53,10 @@ def main(filename):
 		tci.write(inccd)
 	tfc.close()
 	tci.close()
-	os.remove('basegeo/{0}'.format(n))
-	os.remove('basegeo/fc.z')
-	os.rename('basegeo/tfc.z', 'basegeo/fc.z')
-	os.rename('basegeo/tci.z', 'basegeo/{0}'.format(n))
+	os.remove('base_geometries/{0}'.format(n))
+	os.remove('base_geometries/fc.z')
+	os.rename('base_geometries/tfc.z', 'base_geometries/fc.z')
+	os.rename('base_geometries/tci.z', 'base_geometries/{0}'.format(n))
 
 filename = sys.argv[1]
 main(filename)
