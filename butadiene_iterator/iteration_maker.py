@@ -10,7 +10,7 @@ def main(filename):
 	print 'Iterating {0}...'.format(filename)
  	con = filename
 	conf = filename[:-2]
-	confile = '{0}.z'.format(con)
+	confile = '{0}'.format(con)
 	numatoms = int(linecache.getline('base_geometries/fc.z', 1))
 	#print 'This many atoms: ', numatoms
 	for n in progressbar.progressbar(range(101)):

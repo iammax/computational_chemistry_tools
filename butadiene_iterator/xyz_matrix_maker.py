@@ -1,6 +1,3 @@
-#Reads from the z matrix supplied by command line, outputs to (z matrix' name).xyz in results/ folder
-
-import sys
 import numpy as np
 from periodic import periodic
 
@@ -62,10 +59,9 @@ def atomlistmaker(infilename):
 	outfile.close()
 	return atomlist
 
-def main():
+def main(infile):
 	pl = 0
 	try:
-		infile = sys.argv[1]
 		infilename = infile
 	except:
 		print	'No infile supplied...'
@@ -129,4 +125,3 @@ def main():
 		newline = ' '.join(map(str, [atomlist[q].name, xyzmatrix[q][0], xyzmatrix[q][1], xyzmatrix[q][2]])) + '\n'
 		outfile.write(newline)
 	outfile.close()
-main()
