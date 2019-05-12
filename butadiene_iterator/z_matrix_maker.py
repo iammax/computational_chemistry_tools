@@ -93,21 +93,6 @@ def atomlistmaker(infile):
 		counter += 1
 	return atomlist
 
-
-def dihedral_all():
-	atomlist = atomlistmaker(sys.argv[1])
-	numatoms = len(atomlist)
-	for i in range (0, numatoms):
-		for j in range(0, numatoms):
-			for k in range (0, numatoms):
-				for l in range (0, numatoms):
-					atomi = atomlist[i]
-					atomj = atomlist[j]
-					atomk = atomlist[k]
-					atoml = atomlist[l]
-					torsiona = torsional(atomi, atomj, atomk, atoml)
-					if np.isclose(torsiona, 179):
-						print 'i, j, k, l, torsion: ', i+1, j+i, k+1, l+1, torsiona
 def main():
 	zmatrix = []
 	atomlist = atomlistmaker(sys.argv[1])
@@ -144,8 +129,8 @@ def main():
 #		newline = ' '.join(line)
 #		print newline	
 #	dihedral_all()
-	outfile = open('results/{0}.z'.format(sys.argv[1][:-4]), 'w')
-	outfile.write('{0}\n{1}\n'.format(len(atomlist), sys.argv[1][:-4]))
+	outfile = open('results/{0}.z'.format(sys.argv[1].split('/')[-1][:-4]), 'w')
+	outfile.write('{0}\n{1}\n'.format(len(atomlist), sys.argv[1].split('/')[-1][:-4]))
 	for line in zmatrix:
 		newline = ' '.join(map(str, line)) + '  ' + '\n'
 		outfile.write(newline)
