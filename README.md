@@ -1,5 +1,5 @@
 # computational_chemistry_tools
-Some tools that I made for my computational chemistry research. If you are a non-chemist/physicist looking at this directory, the most interesting thing for you is probably the jupyter notebook inside butadiene_iterator.
+Some tools that I made for my computational chemistry research, which I've put here to share with the other members of my lab. If you are a non-chemist/physicist looking at this directory, the most interesting thing for you is probably the jupyter notebook inside butadiene_iterator.
 
 A brief chapter of contents of this repo:
 
