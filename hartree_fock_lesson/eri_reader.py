@@ -1,5 +1,6 @@
 import numpy as np
-
+#This one is not super efficient as it stores the full 4-index tensor and doesn't take advantage of electron-repulsion-integral symmetry. 
+#But it's just for a quick demo on a small system, so performance isn't an issue
 
 def main(numfuncs,filename):
 	print_level = 0
